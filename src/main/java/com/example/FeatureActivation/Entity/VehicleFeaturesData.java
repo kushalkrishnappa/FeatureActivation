@@ -5,7 +5,9 @@ import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Table
 @Entity
 public class VehicleFeaturesData {
 	
@@ -19,10 +21,10 @@ public class VehicleFeaturesData {
 	@Column(name = "DEAC_DATE")
     private Date DeActivatedDate;
     
-    @Column(name = "FEATURE_CODE")
+    @Column(name = "FTR_CODE")
     private String featureCode;
     
-    @Column(name = "FEATURE_DESC")
+    @Column(name = "FTR_DESC")
     private String featureDesc;
     
     @Column(name = "ENB_FLG")
