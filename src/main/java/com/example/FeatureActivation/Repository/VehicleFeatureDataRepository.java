@@ -10,6 +10,7 @@ import com.example.FeatureActivation.Entity.VehicleFeaturesData;
 
 @Repository
 public interface VehicleFeatureDataRepository extends CrudRepository<VehicleFeaturesData, String>{
-	@Query(name = "SELECT * FROM FTR_ACT WHERE VIN = ?1")
-	public List<VehicleFeaturesData> findByVIN(String VIN);
+	@Query(value = "SELECT * FROM FTR_ACT WHERE VIN = ?1 AND ENB_FLG = ?2", nativeQuery = true)
+	public List<VehicleFeaturesData> getVehicleFeaturesDatas(String VIN, String flag);
 }
+

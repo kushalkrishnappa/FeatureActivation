@@ -7,15 +7,26 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table
+@Table(name = "FTR_ACT")
 @Entity
 public class VehicleFeaturesData {
 	
     @Id
+    @Column(name = "VEH_FTR_D")
+    private Long VEH_FTR_D;
+
     @Column(name = "VIN")
     private String VIN;
     
-    @Column(name = "ACTI_DATE")
+    public Long getVEH_FTR_D() {
+		return VEH_FTR_D;
+	}
+
+	public void setVEH_FTR_D(Long vEH_FTR_D) {
+		VEH_FTR_D = vEH_FTR_D;
+	}
+
+	@Column(name = "ACTI_DATE")
     private Date activatedDate;
 
 	@Column(name = "DEAC_DATE")
@@ -32,17 +43,6 @@ public class VehicleFeaturesData {
     
     public String getVIN() {
 		return VIN;
-	}
-    
-    public VehicleFeaturesData() {
-
-	}
-
-	public VehicleFeaturesData(Date activatedDate, String featureCode, String featureDesc) {
-		super();
-		this.activatedDate = activatedDate;
-		this.featureCode = featureCode;
-		this.featureDesc = featureDesc;
 	}
 
 	public void setVIN(String vIN) {

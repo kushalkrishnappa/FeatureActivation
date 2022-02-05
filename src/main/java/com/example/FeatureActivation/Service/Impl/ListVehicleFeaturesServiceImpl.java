@@ -14,9 +14,7 @@ public class ListVehicleFeaturesServiceImpl {
 	private VehicleFeatureDataRepository featureDataRepository;
 
 	public List<VehicleFeaturesData> getVehicleEnabledFeatures(String VIN) {
-		// TODO Auto-generated method stub
-		List<VehicleFeaturesData> vehicleFeaturesDataList = featureDataRepository.findByVIN(VIN);
+		List<VehicleFeaturesData> vehicleFeaturesDataList = featureDataRepository.getVehicleFeaturesDatas(VIN, "Y");
 		return vehicleFeaturesDataList;
 	}
-
 }
