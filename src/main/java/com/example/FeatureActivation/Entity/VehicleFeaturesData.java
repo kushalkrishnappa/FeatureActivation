@@ -31,6 +31,17 @@ public class VehicleFeaturesData {
     public String getVIN() {
 		return VIN;
 	}
+    
+    public VehicleFeaturesData() {
+
+	}
+
+	public VehicleFeaturesData(Date activatedDate, String featureCode, String featureDesc) {
+		super();
+		this.activatedDate = activatedDate;
+		this.featureCode = featureCode;
+		this.featureDesc = featureDesc;
+	}
 
 	public void setVIN(String vIN) {
 		VIN = vIN;
